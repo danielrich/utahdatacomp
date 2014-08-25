@@ -29,7 +29,7 @@ This file represents 10,000 different potential inputs for the very next wafer i
 **val_Y.csv**
 This file represents the yield on the 10,000 potential wafers that could have run. This is the file you will use to compare your prediction against to score the value of your model.
 
-#**!!! IMPORTANT CUSTOM ERROR FUNCTION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< THIS IS WHAT YOU ARE BEING SCORED ON**
+#**!!! IMPORTANT CUSTOM ERROR FUNCTION <<<<<<<<<<<<<<< THIS IS WHAT YOU ARE BEING SCORED ON**
 This problem has a custom error function. This forces you to look at type-I and type-II errors in your modeling. So to do this any under prediction residuals get a 10x multiplier penalty added to them. Here is a Matlab example:
 
 ```
