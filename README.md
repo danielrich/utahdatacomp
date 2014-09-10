@@ -45,15 +45,11 @@ This problem has a custom error function. This forces you to look at type-I and 
 
 ```
 %Special cost function, under prediction is 10x penalty
-err_LSR=yp_LSR-sim_yield_val_die_loss;              %Calculate errors
-err_WLSR=yp_WLSR-sim_yield_val_die_loss;
+err=Y_pred-Y_val;              %Calculate raw errors
 
 %Custom residual sum
-err_underpredict_LSR=abs(err_LSR(err_LSR<0))*10;        %10x penalty
-err_overpredict_LSR=abs(err_LSR(err_LSR>=0));
-err_underpredict_WLSR=abs(err_WLSR(err_WLSR<0))*10;        %10x penalty
-err_overpredict_WLSR=abs(err_WLSR(err_WLSR>=0));
+err_under=sum(abs(err(err<0)))*10;        %10x penalty
+err_over=sum(abs(err(err>=0)));
 
-overall_score_LSR=(sum(err_underpredict_LSR)+sum(err_overpredict_LSR))/wafer_count
-overall_score_WLSR=(sum(err_underpredict_WLSR)+sum(err_overpredict_WLSR))/wafer_count
+overall_score_LSR=(err_under+err_over)/wafer_count
 ```

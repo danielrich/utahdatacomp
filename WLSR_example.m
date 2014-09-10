@@ -1,8 +1,7 @@
-%This function was written by Ben Taylor @bentaylordata to demonstrate two
-%approaches to this problem (LSR, and EWLSR). The first regression ignores
-%the time effects, the second weights them with a 0.8 lambda decay, think
-%EWMA. Tweet me @bentaylordata with hashtag #utahdatacompetition with any
-%questions. 
+% This is an example for exponentialy weighted least squares regression. This is a Matlab/Octave script. For those without octave you can:
+%     sudo apt-get install octave
+%     octave WLSR_example.m
+% Tweet me @bentaylordata with hashtag #utahdatacompetition with any questions
 
 context_map=csvread('train_X.csv');             % Load train input (context matrix)
 sim_yield_die_loss=csvread('train_Y.csv');      % Load train output
