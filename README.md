@@ -4,13 +4,6 @@ Contact: Ben Taylor, @bentaylordata, www.linkedin.com/in/bentaylordata/
 
 **Latest Leaderboard**
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
 | Author  | Score |
 | ------------- | ------------- |
 | [HOST-WLSR](https://bitbucket.org/bentaylorche/utahdatacompetition/src/80bac679314cfae3477a5384d34e42f8c0350ce3/WLSR_example.m?at=master)  | 575.3149  |
