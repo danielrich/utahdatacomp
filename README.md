@@ -8,8 +8,8 @@ Contact: Ben Taylor, @bentaylordata, www.linkedin.com/in/bentaylordata/
 | ------------- | ------------- |
 | [HOST-WLSR.m](https://bitbucket.org/bentaylorche/utahdatacompetition/src/80bac679314cfae3477a5384d34e42f8c0350ce3/WLSR_example.m?at=master)  | 575.3149  |
 | [HOST-LSR.m](https://bitbucket.org/bentaylorche/utahdatacompetition/src/80bac679314cfae3477a5384d34e42f8c0350ce3/LSR_example.m?at=master)  | 680.0148  |
-| [HOST-SVR.py](https://bitbucket.org/bentaylorche/utahdatacompetition/src/80bac679314cfae3477a5384d34e42f8c0350ce3/SVR_example.py?at=master)  | 681.8721  |
-| [HOST-LSR.py](https://bitbucket.org/bentaylorche/utahdatacompetition/src/80bac679314cfae3477a5384d34e42f8c0350ce3/LSR_example.py?at=master)  | 707.7465  |
+| [HOST-SVR.py](https://bitbucket.org/bentaylorche/utahdatacompetition/src/5cf8894e4dce099a7d39d9063fc4550d3df7d260/SVR_example.py?at=master)  | 681.8721  |
+| [HOST-LSR.py](https://bitbucket.org/bentaylorche/utahdatacompetition/src/5cf8894e4dce099a7d39d9063fc4550d3df7d260/LSR_example.py?at=master)  | 707.7465  |
 
 
 
