@@ -9,7 +9,7 @@ Contact: Ben Taylor, @bentaylordata, www.linkedin.com/in/bentaylordata/
 | HOST-WLSR  | 575.3149  |
 | HOST-LSR  | 680.0148  |
 
-
+[a relative link](LSR_example.m)
 
 **Problem background:**
 Semiconductor yield modeling can be very challenging because of all of the mixing that takes place inside a fab. Where is the problem coming from? This problem is also very valuable because excursions can quickly cost 10s of millions of dollars in lost revenue if not detected quickly. Can you design a model that can predict the next yield point based on the past days worth of fab production? The time effects are critical to understanding the system and predicting the next point. Ideally everyone would be scored on the next unseen point, but to make the rankings statistically significant we need to provide thousands of next points to compare. The great thing with a synthetic fab simulation is we can do this. So val_X.csv dataset includes 10,000 possible next points with their corresponding yield. For the final competition a new train_X.csv, train_Y.csv, val_X.csv datasets will be provided. For the final score val_Y.csv will not be given, but contestants can submit their prediction data sets for final scoring.
