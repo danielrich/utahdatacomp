@@ -24,7 +24,7 @@ Y_pred[Y_pred > 600] = 600
 
 # Calculate score
 err_Y=Y_pred-Y_val
-score = (sum(abs(err_Y[err_Y<0]))*10+sum(abs(err_Y[err_Y>=0])))/len(X)
+score = (sum(abs(err_Y[err_Y<0]))*10+sum(abs(err_Y[err_Y>=0])))/len(err_Y)
 
 print score
 
