@@ -50,3 +50,15 @@ err_over=sum(abs(err(err>=0)));
 
 overall_score_LSR=(err_under+err_over)/wafer_count
 ```
+
+Here is a python example
+
+```
+# Calculate score
+err_Y=Y_pred-Y_val
+score = (sum(abs(err_Y[err_Y<0]))*10+sum(abs(err_Y[err_Y>=0])))/len(err_Y)
+```
+
+
+
+
