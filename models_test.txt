@@ -32,3 +32,12 @@ test
 235.729607723  exponential loss Ada Boost regressor 
 261.702756599  square loss Ada Boost regressor time series
 249.849017928  exponential loss Ada Boost regressor  time series
+236.556082136  average of 10 segmented exponential loss Ada Boost regressor 
+373.333573357  average of 500 segmented exponential loss Ada Boost regressor 
+216.085730587  proper time square loss Ada Boost regressor 
+218.336761785  proper time exponential loss Ada Boost regressor 
+215.411439588  proper time square loss Ada Boost regressor 
+218.564318864  proper time exponential loss Ada Boost regressor 
+216.694502093  proper time  Ada Boost regressor 
+218.240900011  proper time square loss Ada Boost regressor 
+217.664070872  proper time exponential loss Ada Boost regressor 

@@ -14,7 +14,8 @@ def run_model( model, model_name, X, Y):
 
     X_val = genfromtxt('val_X.csv', delimiter=',')
     Y_val = genfromtxt('val_Y.csv', delimiter=',')
-    new_values = [ [x] for x in range(len(X_val))]
+
+    new_values = [ [10000] for x in range(len(X_val))]
     X_val = numpy.append(X_val, new_values, 1)
 
     # Now predict validation output
@@ -70,5 +71,6 @@ X = numpy.append(X, new_values, 1)
 #ensemble.ExtraTreesRegressor(n_estimators=8, n_jobs=8),
 ##linear_model.Ridge(alpha=.5)],
 # "40 estimator ExtraTrees regressor n-jobs time series averaged with 8 estimator and ridge.", X, Y)
-run_model(ensemble.AdaBoostRegressor(loss="square"), " square loss Ada Boost regressor ", X, Y)
-run_model(ensemble.AdaBoostRegressor(loss="exponential"), " exponential loss Ada Boost regressor ", X, Y)
+run_model(ensemble.AdaBoostRegressor(), " proper time square loss Ada Boost regressor ", X, Y)
+run_model(ensemble.AdaBoostRegressor(loss="square"), " proper time square loss Ada Boost regressor ", X, Y)
+run_model(ensemble.AdaBoostRegressor(loss="exponential"), " proper time exponential loss Ada Boost regressor ", X, Y)
