@@ -6,7 +6,9 @@ X = genfromtxt('train_X.csv', delimiter=',')
 Y = genfromtxt('train_Y.csv', delimiter=',')
 
 # Create linear regression object
-regr = linear_model.LinearRegression()
+#regr = linear_model.LinearRegression() 648.56
+regr = linear_model.Ridge(alpha=.5)
+
 
 # Train the model using the training sets
 regr.fit(X, Y)

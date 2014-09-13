@@ -1,0 +1,34 @@
+677.963951743 linear ridge, .5
+676.132332943 linear ridge, 1
+672.99558168 linear ridge, 2
+666.237410391 linear ridge, 5
+test
+676.923605694 linear ridge time series, .1
+659.744218699 linear ridgecv, .5
+636.168780304 linear lasso, .1
+663.193386596 linear lassoCV
+675.172734136 linear ridge time series, .5
+655.461641237 linear ridgeCV time series, 
+622.029568557 random forest regressor 
+232.079365752 ada boost regressor 
+704.166047305 ExtraTrees regressor 
+623.296915016 GradientBoosting regressor 
+641.74259606 ExtraTrees regressor n-jobs
+638.85380058 ExtraTrees regressor n-jobs time series
+629.206032003 ExtraTrees regressor n-jobs
+635.092518452 ExtraTrees regressor n-jobs time series
+701.674223722 ExtraTrees regressor n-jobs time series
+706.548894489 ExtraTrees regressor n-jobs time series
+705.826160741  8 estimator ExtraTrees regressor n-jobs time series
+702.320099677 15 estimator ExtraTrees regressor n-jobs time series
+705.733140364 20 estimator ExtraTrees regressor n-jobs time series
+700.333365312 40 estimator ExtraTrees regressor n-jobs time series
+673.44668091 40 estimator ExtraTrees regressor n-jobs time series averaged with 8 estimator and ridge.
+251.120254588  Ada Boost regressor 
+253.939257895  estimators 100 Ada Boost regressor 
+247.162296798  decision tree regressor depth 4 estimators 100 Ada Boost regressor 
+310.652814838  estimators 300 Ada Boost regressor 
+238.669429874  square loss Ada Boost regressor 
+235.729607723  exponential loss Ada Boost regressor 
+261.702756599  square loss Ada Boost regressor time series
+249.849017928  exponential loss Ada Boost regressor  time series
