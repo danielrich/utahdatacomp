@@ -8,11 +8,11 @@ test
 636.168780304 linear lasso, .1
 663.193386596 linear lassoCV
 675.172734136 linear ridge time series, .5
-655.461641237 linear ridgeCV time series, 
-622.029568557 random forest regressor 
-232.079365752 ada boost regressor 
-704.166047305 ExtraTrees regressor 
-623.296915016 GradientBoosting regressor 
+655.461641237 linear ridgeCV time series,
+622.029568557 random forest regressor
+232.079365752 ada boost regressor
+704.166047305 ExtraTrees regressor
+623.296915016 GradientBoosting regressor
 641.74259606 ExtraTrees regressor n-jobs
 638.85380058 ExtraTrees regressor n-jobs time series
 629.206032003 ExtraTrees regressor n-jobs
@@ -24,20 +24,118 @@ test
 705.733140364 20 estimator ExtraTrees regressor n-jobs time series
 700.333365312 40 estimator ExtraTrees regressor n-jobs time series
 673.44668091 40 estimator ExtraTrees regressor n-jobs time series averaged with 8 estimator and ridge.
-251.120254588  Ada Boost regressor 
-253.939257895  estimators 100 Ada Boost regressor 
-247.162296798  decision tree regressor depth 4 estimators 100 Ada Boost regressor 
-310.652814838  estimators 300 Ada Boost regressor 
-238.669429874  square loss Ada Boost regressor 
-235.729607723  exponential loss Ada Boost regressor 
+251.120254588  Ada Boost regressor
+253.939257895  estimators 100 Ada Boost regressor
+247.162296798  decision tree regressor depth 4 estimators 100 Ada Boost regressor
+310.652814838  estimators 300 Ada Boost regressor
+238.669429874  square loss Ada Boost regressor
+235.729607723  exponential loss Ada Boost regressor
 261.702756599  square loss Ada Boost regressor time series
 249.849017928  exponential loss Ada Boost regressor  time series
-236.556082136  average of 10 segmented exponential loss Ada Boost regressor 
-373.333573357  average of 500 segmented exponential loss Ada Boost regressor 
-216.085730587  proper time square loss Ada Boost regressor 
-218.336761785  proper time exponential loss Ada Boost regressor 
-215.411439588  proper time square loss Ada Boost regressor 
-218.564318864  proper time exponential loss Ada Boost regressor 
-216.694502093  proper time  Ada Boost regressor 
-218.240900011  proper time square loss Ada Boost regressor 
-217.664070872  proper time exponential loss Ada Boost regressor 
+236.556082136  average of 10 segmented exponential loss Ada Boost regressor
+373.333573357  average of 500 segmented exponential loss Ada Boost regressor
+216.085730587  proper time square loss Ada Boost regressor
+218.336761785  proper time exponential loss Ada Boost regressor
+215.411439588  proper time square loss Ada Boost regressor
+218.564318864  proper time exponential loss Ada Boost regressor
+216.694502093  proper time  Ada Boost regressor
+218.240900011  proper time square loss Ada Boost regressor
+217.664070872  proper time exponential loss Ada Boost regressor
+4719970.04299 PLS Regression Basic time
+6887874.62601 PLS Regression no time
+663.193386596 LassoLars Basic time
+663.193386596 LassoLars no time
+414.319377387 Lars Basic time
+633.903428666 Lars no time
+432.150847148 MultiTaskLasso Basic time
+663.193386596 MultiTaskLasso no time
+416.397416901 BayesianRidge Basic time
+649.980571166 BayesianRidge no time
+605.613032397  lars estimators 100 Ada Boost regressor  Basic time
+844.104322545  lars estimators 100 Ada Boost regressor  no time
+534.41344071  lars estimators 100 Ada Boost regressor square loss Basic time
+818.991001777  lars estimators 100 Ada Boost regressor square loss no time
+561.971686224  lars estimators 100 Ada Boost regressor exponential loss Basic time
+880.363811666  lars estimators 100 Ada Boost regressor exponential loss no time
+2418.93141029  last 1000 samples Ada Boost regressor  Basic time
+598.466840661  last 1000 samples Ada Boost regressor  Basic time
+# Bad samples due to 1000 samples mess
+457.097488917  pipeline lasso+ Ada Boost regressor  Basic time
+452.272523996  4 decision tree regressor Ada Boost regressor  Basic time
+442.801155343  1000 estimator Ada Boost regressor  Basic time
+451.500209708  50 estimator Ada Boost regressor  Basic time
+468.324420559  1000 estimator Ada Boost regressor  Basic time
+453.323158461  1000 estimator Ada Boost regressor  Basic time
+# bad samples due to 100 samples mess
+219.927000684  50 estimator Ada Boost regressor  Basic time
+218.39469861  75 estimator Ada Boost regressor  Basic time
+220.55016677  25 estimator Ada Boost regressor  Basic time
+216.416284147  1000 estimator Ada Boost regressor  Basic time
+220.274895329 pipelined lasso to adaboost Basic time
+983.80714458 square Ada Boost regressor modified sklearn Basic time
+224.553048262 square Ada Boost regressor modified sklearn Basic time
+221.469524862 square Ada Boost regressor modified sklearn Basic time
+216.668350721 square Ada Boost regressor modified sklearn Basic time
+213.504437334 square Ada Boost regressor modified sklearn Basic time
+212.182851292 square Ada Boost regressor modified sklearn Basic time +1.5
+213.276981897 square Ada Boost regressor modified sklearn Basic time +2.5
+213.08155207 square Ada Boost regressor modified sklearn Basic time +2.0
+212.395674356 square Ada Boost regressor modified sklearn Basic time + 1.75
+214.170173722 square Ada Boost regressor modified sklearn Basic time +.75
+211.4755655 StandardScaler applied square Ada Boost regressor modified sklearn Basic time + .75
+214.605383024 StandardScaler applied exponential Ada Boost regressor modified sklearn Basic time
+217.704641479 StandardScaler applied Ada Boost regressor modified sklearn Basic time
+211.776504263 StandardScaler applied square Ada Boost regressor modified sklearn Basic time + 1.5
+334.770496888 StandardScaler applied square Ada Boost regressor modified sklearn with 10x neg Basic time
+1049.92999669 StandardScaler applied square Ada Boost regressor modified sklearn with 10x pos Basic time
+360.000862233 StandardScaler applied square Ada Boost regressor modified sklearn with 5x neg Basic time
+372.64980243 StandardScaler applied square Ada Boost regressor modified sklearn with 5x neg Basic time
+316.059339668 StandardScaler applied square Ada Boost regressor modified sklearn with 5x neg Basic time
+318.372686112 StandardScaler applied square Ada Boost regressor modified sklearn with 5x neg Basic time
+279.358610599 StandardScaler applied square Ada Boost regressor modified sklearn with 5x neg Basic time
+238.852620842 StandardScaler applied square Ada Boost regressor modified sklearn with 5x neg Basic time
+342.461560519 StandardScaler applied square Ada Boost regressor modified sklearn with 5x neg Basic time
+211.70208262 StandardScaler applied square Ada Boost regressor modified sklearn with 5x neg Basic time
+217.16359698 StandardScaler applied square Ada Boost regressor modified sklearn with .15x.15x.15x.15x.15x.15x.15x.15x.15x.15x.15x.15x.15x.15x.15x neg Basic time
+215.267443895 StandardScaler applied square Ada Boost regressor modified sklearn with .15x neg Basic time
+220.795024577  decision tree regressor depth 2 estimators 300 Ada Boost regressor modified sklearn  Basic time
+211.33034615 StandardScaler applied square Ada Boost regressor modified sklearn with .08x neg Basic time
+336.736627768  decision tree regressor depth 2 estimators 300 Ada Boost regressor modified sklearn  Basic time
+211.736807042 StandardScaler applied square Ada Boost regressor modified sklearn with .05x neg Basic time
+213.487255698  decision tree regressor depth 3 estimators 600 Ada Boost regressor modified sklearn  Basic time
+211.2701916 StandardScaler applied square Ada Boost regressor modified sklearn with .07x neg Basic time
+211.254029356  decision tree regressor depth 4 estimators 600 Ada Boost regressor modified sklearn  Basic time
+211.551422225  decision tree regressor depth 5 estimators 600 Ada Boost regressor modified sklearn  Basic time
+214.143641094  decision tree regressor depth 4 estimators 800 Ada Boost regressor modified sklearn  Basic time
+An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (9, 0))
+
+An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (9, 0))
+
+An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (9, 0))
+
+An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (9, 0))
+
+An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (9, 0))
+
+An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (9, 0))
+
+An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (9, 0))
+
+An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (9, 0))
+

@@ -43,6 +43,12 @@ def run_model( model, model_name, X, Y, X_val, Y_val):
     run_basic_time(model, model_name, X, Y, X_val, Y_val)
 
 #run_model(ensemble.AdaBoostRegressor(loss="square"), "StandardScaler applied square Ada Boost regressor modified sklearn with .07x neg", X, Y, X_val, Y_val)
-run_model(ensemble.AdaBoostRegressor(DecisionTreeRegressor(max_depth=4),n_estimators=800), " decision tree regressor depth 4 estimators 600 Ada Boost regressor modified sklearn ", X, Y, X_val, Y_val)
-run_model(ensemble.AdaBoostRegressor(DecisionTreeRegressor(max_depth=5),n_estimators=600), " decision tree regressor depth 4 estimators 600 Ada Boost regressor modified sklearn ", X, Y, X_val, Y_val)
+from sklearn import grid_search
+
+parameters = {"n_estimators":(50,100,200,300,400,500), "base_estimator__max_depth":(2,3,4,5,6,7,8,9,10)}
+model = ensemble.AdaBoostRegressor(DecisionTreeRegressor())
+grid_model = grid_search.GridSearchCV(model, parameters, n_jobs=4)
+run_model(grid_model, " decision tree regressor depth gridsearch Ada Boost regressor modified sklearn ", X, Y, X_val, Y_val)
+
+print grid_model.get_params()
 
