@@ -107,35 +107,3 @@ test
 211.254029356  decision tree regressor depth 4 estimators 600 Ada Boost regressor modified sklearn  Basic time
 211.551422225  decision tree regressor depth 5 estimators 600 Ada Boost regressor modified sklearn  Basic time
 214.143641094  decision tree regressor depth 4 estimators 800 Ada Boost regressor modified sklearn  Basic time
-An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (9, 0))
-
-An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (9, 0))
-
-An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (9, 0))
-
-An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (9, 0))
-
-An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (9, 0))
-
-An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (9, 0))
-
-An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (9, 0))
-
-An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (9, 0))
-
