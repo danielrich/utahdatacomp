@@ -44,7 +44,7 @@ def run_model( model, model_name, X, Y, X_val):
 
     run_basic_time(model, model_name, X, Y, X_val)
 
-run_model(ensemble.AdaBoostRegressor(loss="square"), "StandardScaler applied square Ada Boost regressor modified sklearn with .07x neg", X, Y, X_val)
+run_model(ensemble.AdaBoostRegressor(loss="square", n_estimators=3000), "StandardScaler applied square 3000 Ada Boost regressor modified sklearn with .07x neg", X, Y, X_val)
 #from sklearn import grid_search
 
 #parameters = {"n_estimators":(50,100,200,300,400,500), "base_estimator__max_depth":(2,3,4,5,6,7,8,9,10)}
