@@ -36,7 +36,6 @@ def run_model( model, model_name, X, Y, X_val):
 
     Y = make_black_maps_class(Y)
     # Load validation data
-    import pdb;pdb.set_trace()
     model.fit(X, Y)
 
     new_values = [ [max_time_val] for x in range(len(X_val))]
@@ -60,11 +59,11 @@ def run_model( model, model_name, X, Y, X_val):
     sys.stdout.flush()
 
 
-run_model(ensemble.AdaBoostClassifier(), "Adaboost class", X, Y, X_val)
-run_model(neighbors.KNeighborsClassifier(), "kNN", X, Y, X_val)
-run_model(tree.DecisionTreeClassifier(), "decicion tree", X, Y, X_val)
-run_model(ensemble.RandomForestClassifier(), "random forest class", X, Y, X_val)
+#run_model(ensemble.AdaBoostClassifier(), "Adaboost class", X, Y, X_val)
+#run_model(neighbors.KNeighborsClassifier(), "kNN", X, Y, X_val)
+#run_model(tree.DecisionTreeClassifier(), "decicion tree", X, Y, X_val)
+#run_model(ensemble.RandomForestClassifier(), "random forest class", X, Y, X_val)
 run_model(lda.LDA(), "LDA", X, Y, X_val)
-run_model(qda.QDA(), "QDA", X, Y, X_val)
-run_model(naive_bayes.GaussianNB(), "gaussianNB", X, Y, X_val)
-run_model(svm.SVC(), "svc", X, Y, X_val)
+#run_model(qda.QDA(), "QDA", X, Y, X_val)
+#run_model(naive_bayes.GaussianNB(), "gaussianNB", X, Y, X_val)
+#run_model(svm.SVC(), "svc", X, Y, X_val)
