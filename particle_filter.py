@@ -36,17 +36,18 @@ class my_filter():
 
     num_points = 0
     total_value = 0
+
+    actual_value = 180/122 # we return a good average as default
+    allowed_error = 20 # I am allowing error of 1-20 which represent shared of assigned error
     def pred_new_point(self):
-        if not self.num_points:
-            return 110.079
-        return (self.total_value/self.num_points) #Just an average accross all the time these points are seen.
+        return self.actual_value
 
     def advance_time(self):
-        pass
+        self.allowed_error += 1
+        if self.allowed_error > 20:
+            self.allowed_error = 20
+        #also perform a revert to the mean
 
-    def record_observation(self, y):
-        self.num_points += 1
-        self.total_value += y
 
 class overall_model():
 
@@ -54,17 +55,27 @@ class overall_model():
     def fit(self, X, Y):
         self.filters = [my_filter() for x in X[0]]
         for time in range(len(X)):
+            predicted = self.predict_point(X[time])
+            pred_error = Y[time] - predicted
+            error_shared_points = 0
             for column in range(len(X[0])):
                 if X[time][column]:
-                    self.filters[column].record_observation(Y[time])
+                    error_shared_points += self.filters[column].allowed_error
+            point_value = pred_error / error_shared_points
+            for column in range(len(X[0])):
+                if X[time][column]:
+                    self.filters[column].actual_value = self.filters[column].allowed_error * point_value
+                    self.filters[column].allowed_error = 0
+            for filt in self.filters:
+                filt.advance_time()
+
 
     def predict_point(self, x):
         total = 0
         for i in range(len(x)):
             if x[i]:
-                import pdb;pdb.set_trace()
                 total += self.filters[i].pred_new_point()
-        return total/122 # number of active contexts
+        return total
 
     def predict(self, X):
         pred = [ self.predict_point(x) for x in X ]
@@ -99,4 +110,4 @@ def run_model( model, model_name, X, Y, X_val):
 
     #print score, model_name, "Basic time"
 
-run_model(overall_model(), "average per point", X, Y, X_val)
+run_model(overall_model(), "moving_average", X, Y, X_val)

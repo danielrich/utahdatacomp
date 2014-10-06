@@ -1,0 +1,9 @@
+average 200 -- score 315.6 I worry about optimizing this one two much since I only have 30% of data
+average 205 -- 316.8
+average 195 -- 314.6
+average 190 -- 313.9
+average 180 -- 313.34
+
+
+ok so now I need to go add this rough result to a black map classifier that just predicts that black maps.
+

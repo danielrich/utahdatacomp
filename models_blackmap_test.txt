@@ -1,0 +1,14 @@
+65 Adaboost class
+0 kNN
+2765 decicion tree
+0 random forest class
+592 LDA
+8606 gaussianNB
+0 svc
+948 LDA
+0 LogisticRegression
+0 LDA full class
+0 LDA_split_class
+0 LDA_split_class
+3837 LDA_600_class
+2542 LDA_onevsrest_class
