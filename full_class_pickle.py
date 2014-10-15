@@ -18,17 +18,32 @@ def make_classes(Y):
         Y[i] = math.floor(Y[i])
     return Y
 
-def get_highest_prob(pred_proba, y_pred, prob_index, count):
+def get_highest_prob(pred_proba, y_pred, prob_index, count, value):
 
     # annotate with the original ordering before doing any sorting. Create a list of tuples (order_num, list_of_probabilities)
+    annotated_prob = [ (i, pred_proba[i]) for i in range(len(pred_proba))]
 
-    result_sort = sorted(pred_proba, key=lambda X: X[prob_index]) # Dang I can't sort it I lose the ordering that way.
+    result_sort = sorted(annotated_prob, key=lambda X: X[1][prob_index])
+    result_sort.reverse()
     points = []
+    if value == 600:
+        count += 100
     for prob in result_sort:
-        if y
+        try:
+            if y_pred[prob[0]] != 0: #already claimed for another class
+                continue
+            if prob[1][prob_index] <= .800: # already claimed enough
+                if count <= 0:
+                    break
+            if prob[1][prob_index] != 0: #perhaps just bigger than 1e-10
+                y_pred[prob[0]] = value
+            else:
+                break
+            count-=1
+        except Exception as e:
+            import pdb;pdb.set_trace()
 
-    import pdb;pdb.set_trace()
-
+    return y_pred
 
 def run_model(model_name, X, Y, X_val):
 
@@ -47,7 +62,7 @@ def run_model(model_name, X, Y, X_val):
     # Now predict validation output
     Y_pred_proba = model.predict_proba(X_val)
     Y_pred = [ 0 for x in X_val ]
-    classes = model.classes_ #sorted(set(Y))
+    classes = [ class_val for class_val in model.classes_] #sorted(set(Y))
     classes.reverse() # becaue of the penalty we want to start high first.
     for class_index in range(len(classes)):
         count = 0
@@ -55,18 +70,19 @@ def run_model(model_name, X, Y, X_val):
             if y == classes[class_index]:
                 count +=1
 
-        prob_index = (class_index - (len(classes) - 1)) * -1
-        predict_points = get_highest_prob(Y_pred_proba, Y_pred, prob_index, count)
-        # it returns a list of indexes to replace
-        for  point in predict_points:
-            Y_pred[point] = classes(class_index)
-
+        prob_index = (class_index - (len(classes) - 1)) * -1 # I reversed the classes
+                                                             # so I need to reverse back
+                                                             # to get the index into the
+                                                             # probilities right.
+        Y_pred = get_highest_prob(Y_pred_proba, Y_pred, prob_index, count, classes[class_index])
 
 
     # I want to make sure that I have the same number of each class as seen before.
     # so out of the 10,000 points I scan through and find the top x most likely members of a
     # given class. Start with the black maps and work down.
-
+    for y_index in range(len(Y_pred)):
+        if Y_pred[y_index] <= 180:
+            Y_pred[y_index] = 180
     # Crop impossible values
     Y_pred[Y_pred < 0] = 0
     Y_pred[Y_pred > 600] = 600
@@ -82,4 +98,4 @@ def run_model(model_name, X, Y, X_val):
     sys.stdout.flush()
 
 from sklearn.multiclass import OneVsRestClassifier
-run_model( "LDA_onevsrest_class", X, Y, X_val)
+run_model( "probalities", X, Y, X_val)
