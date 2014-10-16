@@ -1,15 +1,7 @@
 from numpy import genfromtxt, savetxt
-from sklearn import ensemble
-from sklearn import neighbors
-from sklearn import linear_model
-from sklearn import tree
 from sklearn import lda
-from sklearn import qda
-from sklearn import naive_bayes
-from sklearn import svm
 import numpy
-from numpy import log
-import sys
+
 # Load training data
 X = genfromtxt('train_X_final.csv', delimiter=',')
 Y = genfromtxt('train_Y_final.csv', delimiter=',')
