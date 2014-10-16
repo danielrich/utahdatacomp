@@ -8,7 +8,6 @@ Y = genfromtxt('train_Y_final.csv', delimiter=',')
 
 X_val = genfromtxt('val_X_final.csv', delimiter=',')
 
-
 def make_black_maps_class(Y):
     for i in range(len(Y)):
         if Y[i] == 600:
